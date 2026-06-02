@@ -101,7 +101,7 @@ public class videogameTournament {
             System.out.println("-----Empezando torneo-----");
             ganador = rand.nextInt(nombres.size());
             puntos.set(ganador, puntos.get(ganador) + 1);
-            System.out.println("Ganador del Torneo: " + nombres.get(ganador) + "--------------------- \n Nombre | Edad | Juego Favorito | Puntos" + nombres.get(ganador) + " | " + edad.get(ganador) + " | " + juegoFav.get(ganador) + " | " + puntos.get(ganador));
+            System.out.println("Ganador del Torneo: " + nombres.get(ganador) + "\n--------------------- \n Nombre | Edad | Juego Favorito | Puntos\n" + nombres.get(ganador) + " | " + edad.get(ganador) + " | " + juegoFav.get(ganador) + " | " + puntos.get(ganador));
         } else {
             System.out.println("-----No hay jugadores-----");
         }
