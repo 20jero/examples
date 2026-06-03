@@ -13,7 +13,7 @@ public class placasCarros {
     static boolean numerosValidos = false;
 
     public static void main(String[] args) {
-        System.out.println("Digite la placa con un espacio entre las letras y los números");
+        System.out.println("Digite la placa: ");
         placaUsr = sc.nextLine().toLowerCase();
         if (placaUsr.length() == 6) {
             for (int i = 0; i < 6; i++) {
@@ -25,8 +25,8 @@ public class placasCarros {
                         }
                     }
                 } else {
-                    for (int k = 0; k < numeros.length(); k++) {
-                        if (placaUsr.charAt(i) == numeros.charAt(k)) {
+                    for (int j = 0; j < numeros.length(); j++) {
+                        if (placaUsr.charAt(i) == numeros.charAt(j)) {
                             contadorNumeros++;
                             numerosValidos = contadorNumeros == 3;
                         }

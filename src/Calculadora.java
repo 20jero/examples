@@ -6,7 +6,6 @@ public class Calculadora {
     static Scanner sc = new Scanner(System.in);
     static String menu = "1. Suma \n2. Resta \n3. División \n4. Multiplicación \n0.Salir";
     static int opcion;
-    static boolean divValida;
     static boolean run = true;
 
     public static void main(String[] args) {
@@ -23,7 +22,7 @@ public class Calculadora {
                 case 2 ->
                     System.out.println(num1 + " - " + num2 + " = " + resta(num1, num2));
                 case 3 -> {
-                    if (divValida) {
+                    if (num2!=0) {
                         System.out.println(num1 + " / " + num2 + " = " + div(num1, num2));
                     } else {
                         System.out.println("Error Matemático, no se puede dividor por 0");
@@ -50,14 +49,8 @@ public class Calculadora {
     }
 
     public static double div(double num1, double num2) {
-        if (num2 != 0) {
-            divValida = true;
-            double result = num1 / num2;
-            return result;
-        } else {
-            divValida = false;
-            return 0;
-        }
+        double result = num1 / num2;
+        return result;
     }
 
     public static double multi(double num1, double num2) {
